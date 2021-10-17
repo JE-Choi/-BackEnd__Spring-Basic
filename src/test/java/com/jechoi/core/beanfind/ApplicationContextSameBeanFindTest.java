@@ -1,11 +1,7 @@
 package com.jechoi.core.beanfind;
 
-import com.jechoi.core.AppConfig;
-import com.jechoi.core.discount.DiscountPolicy;
 import com.jechoi.core.member.MemberRepository;
-import com.jechoi.core.member.MemberServiceImpl;
 import com.jechoi.core.member.MemoryMemberRepository;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
