@@ -7,6 +7,8 @@ import com.jechoi.core.member.MemberService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class OrderServiceTest {
 
@@ -15,9 +17,9 @@ public class OrderServiceTest {
 
     @BeforeEach
     void setUp() {
-        final AppConfig appConfig = new AppConfig();
-        this.orderService = appConfig.orderService();
-        this.memberService = appConfig.memberService();
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        this.orderService = ac.getBean("orderService", OrderService.class);
+        this.memberService = ac.getBean("memberService", MemberService.class);
     }
 
     @Test
