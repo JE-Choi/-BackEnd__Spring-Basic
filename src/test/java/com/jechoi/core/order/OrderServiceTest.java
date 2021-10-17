@@ -1,18 +1,27 @@
 package com.jechoi.core.order;
 
+import com.jechoi.core.AppConfig;
 import com.jechoi.core.member.Grade;
 import com.jechoi.core.member.Member;
 import com.jechoi.core.member.MemberService;
-import com.jechoi.core.member.MemberServiceImpl;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class OrderServiceTest {
-    final MemberService memberService = new MemberServiceImpl();
-    final OrderService orderService = new OrderServiceImpl();
+
+    MemberService memberService;
+    OrderService orderService;
+
+    @BeforeEach
+    void setUp() {
+        final AppConfig appConfig = new AppConfig();
+        this.orderService = appConfig.orderService();
+        this.memberService = appConfig.memberService();
+    }
 
     @Test
-    void createOrder(){
+    void createOrder() {
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);
         memberService.join(member);

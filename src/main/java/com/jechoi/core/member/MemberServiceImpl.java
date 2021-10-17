@@ -2,7 +2,11 @@ package com.jechoi.core.member;
 
 // 구현체 1개있을때는 관례상 Impl을 붙임.
 public class MemberServiceImpl implements MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public void join(Member member) {
