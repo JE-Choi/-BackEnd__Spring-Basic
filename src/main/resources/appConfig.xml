@@ -14,5 +14,5 @@
         <constructor-arg name="discountPolicy" ref="discountPolicy"/>
     </bean>
 
-    <bean id="discountPolicy" class="com.jechoi.core.discount.RateDiscountPolicy"></bean>
+    <bean id="discountPolicy" class="com.jechoi.core.discount.impl.DiscountPolicyRateImpl"></bean>
 </beans>

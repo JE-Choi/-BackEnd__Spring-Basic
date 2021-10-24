@@ -1,9 +1,10 @@
-package com.jechoi.core.discount;
+package com.jechoi.core.discount.impl;
 
+import com.jechoi.core.discount.DiscountPolicy;
 import com.jechoi.core.member.Grade;
 import com.jechoi.core.member.Member;
 
-public class RateDiscountPolicy implements DiscountPolicy {
+public class DiscountPolicyRateImpl implements DiscountPolicy {
     private int discountPercent = 10;
 
     @Override

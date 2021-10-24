@@ -1,16 +1,15 @@
 package com.jechoi.core.discount;
 
+import com.jechoi.core.discount.impl.DiscountPolicyRateImpl;
 import com.jechoi.core.member.Grade;
 import com.jechoi.core.member.Member;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+class DiscountPolicyRateImplTest {
 
-class RateDiscountPolicyTest {
-
-    RateDiscountPolicy discountPolicy = new RateDiscountPolicy();
+    DiscountPolicyRateImpl discountPolicy = new DiscountPolicyRateImpl();
 
     @Test
     @DisplayName("VIP는 10% 할인이 적용되어야 한다.") // Junit5부터 지원

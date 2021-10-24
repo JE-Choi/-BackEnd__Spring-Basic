@@ -1,9 +1,10 @@
-package com.jechoi.core.discount;
+package com.jechoi.core.discount.impl;
 
+import com.jechoi.core.discount.DiscountPolicy;
 import com.jechoi.core.member.Grade;
 import com.jechoi.core.member.Member;
 
-public class FixDiscountPolicy implements DiscountPolicy {
+public class DiscountPolicyFixedImpl implements DiscountPolicy {
     private int discountFixAmount = 1000; // 고정할인
 
     @Override
