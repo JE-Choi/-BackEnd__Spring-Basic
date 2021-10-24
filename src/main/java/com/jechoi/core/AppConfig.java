@@ -1,7 +1,7 @@
 package com.jechoi.core;
 
 import com.jechoi.core.discount.DiscountPolicy;
-import com.jechoi.core.discount.RateDiscountPolicy;
+import com.jechoi.core.discount.impl.DiscountPolicyRateImpl;
 import com.jechoi.core.member.MemberRepository;
 import com.jechoi.core.member.MemberService;
 import com.jechoi.core.member.MemberServiceImpl;
@@ -36,7 +36,7 @@ public class AppConfig {
 
     @Bean
     public DiscountPolicy discountPolicy() {
-        return new RateDiscountPolicy();
+        return new DiscountPolicyRateImpl();
     }
 
 }
