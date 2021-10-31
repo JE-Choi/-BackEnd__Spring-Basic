@@ -3,7 +3,9 @@ package com.jechoi.core.discount.impl;
 import com.jechoi.core.discount.DiscountPolicy;
 import com.jechoi.core.member.Grade;
 import com.jechoi.core.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DiscountPolicyRateImpl implements DiscountPolicy {
     private int discountPercent = 10;
 
